@@ -15,13 +15,13 @@
 #define VIDEO_INDICATOR_PADDING 10
 
 @interface MWGridCell () {
-    
+
     UIImageView *_imageView;
     UIImageView *_videoIndicator;
     UIImageView *_loadingError;
 	DACircularProgressView *_loadingIndicator;
     UIButton *_selectedButton;
-    
+
 }
 
 @end
@@ -32,8 +32,8 @@
     if ((self = [super initWithFrame:frame])) {
 
         // Grey background
-        self.backgroundColor = [UIColor colorWithWhite:0.12 alpha:1];
-        
+        self.backgroundColor = [UIColor whiteColor];
+
         // Image
         _imageView = [UIImageView new];
         _imageView.frame = self.bounds;
@@ -41,7 +41,7 @@
         _imageView.clipsToBounds = YES;
         _imageView.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self addSubview:_imageView];
-        
+
         // Video Image
         _videoIndicator = [UIImageView new];
         _videoIndicator.hidden = NO;
@@ -50,7 +50,7 @@
         _videoIndicator.image = videoIndicatorImage;
         _videoIndicator.autoresizesSubviews = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
         [self addSubview:_videoIndicator];
-        
+
         // Selection button
         _selectedButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _selectedButton.contentMode = UIViewContentModeTopRight;
@@ -61,14 +61,14 @@
         _selectedButton.hidden = YES;
         _selectedButton.frame = CGRectMake(0, 0, 44, 44);
         [self addSubview:_selectedButton];
-    
+
 		// Loading indicator
 		_loadingIndicator = [[DACircularProgressView alloc] initWithFrame:CGRectMake(0, 0, 40.0f, 40.0f)];
         _loadingIndicator.userInteractionEnabled = NO;
         _loadingIndicator.thicknessRatio = 0.1;
         _loadingIndicator.roundedCorners = NO;
 		[self addSubview:_loadingIndicator];
-        
+
         // Listen for photo loading notifications
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(setProgressFromNotification:)
@@ -78,7 +78,7 @@
                                                  selector:@selector(handleMWPhotoLoadingDidEndNotification:)
                                                      name:MWPHOTO_LOADING_DID_END_NOTIFICATION
                                                    object:nil];
-        
+
     }
     return self;
 }
