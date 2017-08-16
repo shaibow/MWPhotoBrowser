@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 
-  s.name = 'MWPhotoBrowser'
-  s.version = '2.1.2'
+  s.name = 'MWPhotoBrowserInWhite'
+  s.version = '2.1.4'
   s.license = 'MIT'
-  s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections.'
+  s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections. ** that is white backgrounded and removed warnings for iOS 10.x'
   s.description = <<-DESCRIPTION
                   MWPhotoBrowser can display one or more images or videos by providing either UIImage
                   objects, PHAsset objects, or URLs to library assets, web images/videos or local files.
@@ -19,12 +19,13 @@ Pod::Spec.new do |s|
     'https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser6.png'
   ]
 
-  s.homepage = 'https://github.com/mwaterfall/MWPhotoBrowser'
-  s.author = { 'Michael Waterfall' => 'michaelwaterfall@gmail.com' }
-  s.social_media_url = 'https://twitter.com/mwaterfall'
+  s.homepage = 'https://github.com/shaibow/MWPhotoBrowserInWhite'
+  s.author = { 'Michael Waterfall' => 'michaelwaterfall@gmail.com',
+  'Pooya Khoshbakht' => 'shaibow@gmail.com' }
+  s.social_media_url = 'https://twitter.com/Pooya_khosh'
 
   s.source = {
-    :git => 'https://github.com/mwaterfall/MWPhotoBrowser.git',
+    :git => 'https://github.com/shaibow/MWPhotoBrowserInWhite',
     :tag => '2.1.2'
   }
   s.platform = :ios, '7.0'
