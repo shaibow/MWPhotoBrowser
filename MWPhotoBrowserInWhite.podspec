@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'MWPhotoBrowserInWhite'
-  s.version = '2.1.4'
+  s.version = '2.1.5'
   s.license = 'MIT'
   s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections. ** that is white backgrounded and removed warnings for iOS 10.x'
   s.description = <<-DESCRIPTION
